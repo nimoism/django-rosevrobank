@@ -23,7 +23,7 @@ setup(
     ],
     scripts=[],
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 2 - Pre-alpha',
         'Intended Audience :: Financial and Insurance Industry',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
