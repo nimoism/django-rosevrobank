@@ -2,9 +2,10 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django_extensions.db.models import TimeStampedModel
 
 
-class RosEvroBankOrder(models.Model):
+class RosEvroBankOrder(TimeStampedModel, models.Model):
     order_content_type = models.ForeignKey(ContentType)
     order_object_id = models.IntegerField()
     order = GenericForeignKey('order_content_type', 'order_object_id')

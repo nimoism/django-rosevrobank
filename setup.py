@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-import dj_rosevrobank as meta
+import rosevrobank as meta
 
 
 def long_description():
@@ -19,7 +19,11 @@ setup(
     platforms=["any"],
     packages=find_packages(),
     install_requires=[
+        'django-extensions',
         'python-rosevrobank-api',
+    ],
+    dependency_links=[
+        'git+https://github.com/nimoism/python-rosevrobank-api.git#egg=python-rosevrobank-api'
     ],
     scripts=[],
     classifiers=[
