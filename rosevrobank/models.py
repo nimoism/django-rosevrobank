@@ -27,6 +27,19 @@ class RosEvroBankOrder(TimeStampedModel, models.Model):
     reb_order_id = models.CharField(_('RosEvroBank order id'), max_length=255, db_index=True, unique=True)
     status = models.IntegerField(_('status'), choices=STATUS_CHOICES, default=RosEvroBankClient.ORDER_STATUS_REGISTERED)
 
+    @classmethod
+    def get_by_order(cls, order):
+        """
+        Gets RosEvroBankOrder by project order
+
+        :param order: project order
+        :type: django.db.models.Model
+        :return: RosEvroBankOrder object
+        :rtype: RosEvroBankOrder
+        """
+        ct = ContentType.objects.get_for_model(order._meta.model)
+        return cls.objects.get(order_content_type=ct, order_object_id=order.id)
+
     @property
     def client(self):
         if not hasattr(self, '_client'):

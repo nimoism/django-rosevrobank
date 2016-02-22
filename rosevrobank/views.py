@@ -8,7 +8,7 @@ from rosevrobank.models import RosEvroBankOrder, order_model
 from rosevrobankapi.response import BaseErrorResponse
 
 
-class ClientMixin(object):
+class ClientViewMixin(object):
     @property
     def client(self):
         if not hasattr(self, '_client'):
@@ -16,9 +16,7 @@ class ClientMixin(object):
         return getattr(self, '_client')
 
 
-class ProcessPaymentView(ClientMixin, View):
-    success_url = None
-    fail_url = None
+class OrderViewMixin(object):
 
     def get_order_id(self):
         return self.kwargs.get('order_id')
@@ -27,6 +25,11 @@ class ProcessPaymentView(ClientMixin, View):
         order_id = self.get_order_id()
         order = order_model._default_manager.get(id=order_id)
         return order
+
+
+class ProcessPaymentView(ClientViewMixin, OrderViewMixin, View):
+    success_url = None
+    fail_url = None
 
     def process(self, order):
         try:
@@ -70,16 +73,13 @@ class ProcessPaymentView(ClientMixin, View):
         return self.process(order)
 
 
-class BasePaymentResultView(TemplateView):
+class BasePaymentResultView(OrderViewMixin, TemplateView):
     context_order_name = 'order'
     context_reb_order_name = 'reb_order'
 
-    def get_reb_order_id(self):
-        return self.request.kwargs('reb_order_id')
-
     def get_reb_order(self):
-        reb_order_id = self.get_reb_order_id()
-        reb_order = RosEvroBankOrder.objects.get(reb_order_id=reb_order_id)
+        order = self.get_order()
+        reb_order = RosEvroBankOrder.get_by_order(order)
         return reb_order
 
     def get_context_data(self, **kwargs):
