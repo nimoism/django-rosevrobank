@@ -19,6 +19,7 @@ setup(
     platforms=["any"],
     packages=find_packages(),
     install_requires=[
+        'django-appconf',
         'django-extensions',
         'python-rosevrobank-api',
     ],
