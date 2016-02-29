@@ -3,7 +3,6 @@ from appconf.base import AppConf
 
 class RosEvroBankConf(AppConf):
     TEST = False
-    CLIENT_RAISE_ERRORS = False
 
     AUTH_USER_NAME = None
     AUTH_PASSWORD = None

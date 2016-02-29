@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-25 00:11+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: models.py:15
+msgid "order is registered but not paid for"
+msgstr "заказ зарегистрирован, но не оплачен"
+
+#: models.py:16
+msgid "pre authorized amount held"
+msgstr "предавторизованная сумма захолдирована"
+
+#: models.py:17
+msgid "order amount authorization completed"
+msgstr "проведена полная авторизация суммы заказа"
+
+#: models.py:18
+msgid "authorization cancelled"
+msgstr "авторизация отменена"
+
+#: models.py:19
+msgid "refund operation to transaction carried out"
+msgstr "по транзакции была проведена операция возврата"
+
+#: models.py:20
+msgid "ACS authorization initiated"
+msgstr "инициирована авторизация через ACS"
+
+#: models.py:21
+msgid "authorization rejected"
+msgstr "авторизация отклонена"
+
+#: models.py:27
+msgid "RosEvroBank order id"
+msgstr "ID заказа РосЕвроБанка"
+
+#: models.py:28
+msgid "status"
+msgstr "статус"
+
+#: models.py:55
+msgid "RosEvroBank order"
+msgstr "заказ РосЕвроБанка"
+
+#: models.py:56
+msgid "RosEvroBank orders"
+msgstr "заказы РосЕвроБанка"

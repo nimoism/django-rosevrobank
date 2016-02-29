@@ -12,12 +12,12 @@ from rosevrobankapi.client import RosEvroBankClient
 
 class RosEvroBankOrder(TimeStampedModel, models.Model):
     STATUS_CHOICES = (
-        (RosEvroBankClient.ORDER_STATUS_REGISTERED, _('registered')),
-        (RosEvroBankClient.ORDER_STATUS_PRE_AUTH_HOLD, _('preauthorization hold')),
-        (RosEvroBankClient.ORDER_STATUS_AUTHORIZED, _('authorized')),
+        (RosEvroBankClient.ORDER_STATUS_REGISTERED, _('order is registered but not paid for')),
+        (RosEvroBankClient.ORDER_STATUS_PRE_AUTH_HOLD, _('pre authorized amount held')),
+        (RosEvroBankClient.ORDER_STATUS_AUTHORIZED, _('order amount authorization completed')),
         (RosEvroBankClient.ORDER_STATUS_AUTH_CANCELLED, _('authorization cancelled')),
-        (RosEvroBankClient.ORDER_STATUS_REFUNDED, _('refunded')),
-        (RosEvroBankClient.ORDER_STATUS_ACS_AUTH_INITIATED, _('ACS authrization initiated')),
+        (RosEvroBankClient.ORDER_STATUS_REFUNDED, _('refund operation to transaction carried out')),
+        (RosEvroBankClient.ORDER_STATUS_ACS_AUTH_INITIATED, _('ACS authorization initiated')),
         (RosEvroBankClient.ORDER_STATUS_AUTH_REJECTED, _('authorization rejected')),
     )
 
