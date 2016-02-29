@@ -40,7 +40,6 @@ def get_client(**kwargs):
     :rtype: RosEvroBankClientProxy
     """
     kwargs.setdefault('backend', get_backend(settings.ROSEVROBANK_BACKEND))
-    kwargs.setdefault('raise_errors', settings.ROSEVROBANK_CLIENT_RAISE_ERRORS)
     api_client = RosEvroBankClient(**kwargs)
     return RosEvroBankClientProxy(api_client)
 

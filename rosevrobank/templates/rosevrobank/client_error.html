@@ -1,0 +1,2 @@
+{% load i18n %}
+Error for order #{{ order.id }}: {% if user_error %}{{ response.message }}{% else %}{% trans 'system error'|capfirst %}{% endif %}
