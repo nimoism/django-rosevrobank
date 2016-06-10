@@ -12,6 +12,8 @@ class RosEvroBankConf(AppConf):
     BACKEND = 'rosevrobankapi.backends.rest.backend.RestBackend'
     BACKEND_OPTIONS = {}
 
+    SESSION_TIMEOUT = 1200
+
     PAYMENT_SUCCESS_VIEW = 'rosevrobank-payment-success'
     PAYMENT_FAIL_VIEW = 'rosevrobank-payment-fail'
     PAYMENT_SUCCESS_URL = None

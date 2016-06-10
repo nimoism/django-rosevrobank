@@ -146,7 +146,7 @@ class ProcessPaymentView(ClientViewMixin, OrderViewMixin, View):
                 amount=source.get_amount_for_pay(),
                 return_url=self.get_success_url(reb_order),
                 fail_url=self.get_fail_url(reb_order),
-                session_timeout=30,
+                session_timeout=settings.ROSEVROBANK_SESSION_TIMEOUT,
             )
         except BaseErrorResponse as result:
             return self.fail(reb_order, result)
