@@ -1,2 +1,2 @@
 {% load i18n %}
-Error for order #{{ order.id }}: {% if user_error %}{{ response.message }}{% else %}{% trans 'system error'|capfirst %}{% endif %}
+Error for order #{{ reb_order.source.id }}: {% if user_error %}{{ response.message }}{% else %}{% trans 'system error'|capfirst %}{% endif %}

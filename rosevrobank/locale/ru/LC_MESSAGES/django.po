@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-25 00:11+0300\n"
+"POT-Creation-Date: 2016-06-09 18:18+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,46 +19,54 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: models.py:15
+#: models.py:17
 msgid "order is registered but not paid for"
 msgstr "заказ зарегистрирован, но не оплачен"
 
-#: models.py:16
+#: models.py:18
 msgid "pre authorized amount held"
 msgstr "предавторизованная сумма захолдирована"
 
-#: models.py:17
+#: models.py:19
 msgid "order amount authorization completed"
 msgstr "проведена полная авторизация суммы заказа"
 
-#: models.py:18
+#: models.py:20
 msgid "authorization cancelled"
 msgstr "авторизация отменена"
 
-#: models.py:19
+#: models.py:21
 msgid "refund operation to transaction carried out"
 msgstr "по транзакции была проведена операция возврата"
 
-#: models.py:20
+#: models.py:22
 msgid "ACS authorization initiated"
 msgstr "инициирована авторизация через ACS"
 
-#: models.py:21
+#: models.py:23
 msgid "authorization rejected"
 msgstr "авторизация отклонена"
 
-#: models.py:27
+#: models.py:29
 msgid "RosEvroBank order id"
 msgstr "ID заказа РосЕвроБанка"
 
-#: models.py:28
+#: models.py:30
 msgid "status"
 msgstr "статус"
 
-#: models.py:55
+#: models.py:57
 msgid "RosEvroBank order"
 msgstr "заказ РосЕвроБанка"
 
-#: models.py:56
+#: models.py:58
 msgid "RosEvroBank orders"
 msgstr "заказы РосЕвроБанка"
+
+#: templates/rosevrobank/client_error.html:2
+msgid "system error"
+msgstr "системная ошибка"
+
+#: templates/rosevrobank/client_http_error.html:2
+msgid "network error"
+msgstr "ошибка сети"
